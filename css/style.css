@@ -226,6 +226,7 @@ body {
   }
 }
 
+/* Lista de animais e conteúdo */
 .js .js-tabcontent section {
   display: none;
 }
@@ -249,7 +250,9 @@ body {
   }
 }
 
-.js-accordion dd {
+/* Lista de perguntas e respostas */
+
+.js .js-accordion dd {
   display: none;
 }
 
@@ -271,6 +274,7 @@ body {
   animation: slideDown 0.5s forwards;
 }
 
+/* animação 'slideDown' para mostrar respostas */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -280,4 +284,16 @@ body {
     opacity: 1;
     max-height: 200px;
   }
+}
+
+/* animação para mostrar conteúdo conforme desce a tela */
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.3s;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
